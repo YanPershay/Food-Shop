@@ -1,0 +1,57 @@
+﻿<Window x:Class="FoodShop.Stock"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FoodShop"
+        mc:Ignorable="d"
+          Title="AdminMenu" ResizeMode="NoResize" MouseLeftButtonDown="window_MouseLeftButtonDown" Height="550" Width="970" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFC52525">
+        <DockPanel HorizontalAlignment="Left" Height="550" LastChildFill="False" VerticalAlignment="Top" Width="230" Background="Black"/>
+        <DockPanel HorizontalAlignment="Left" Height="124" LastChildFill="False" VerticalAlignment="Top" Width="158" Margin="230,0,0,0" Background="Black"/>
+        <DockPanel HorizontalAlignment="Left" Height="89" LastChildFill="False" VerticalAlignment="Top" Width="123" Margin="248,0,0,0" Background="#FFC52525"/>
+        <Button Content="       О нас" Foreground="AliceBlue" HorizontalAlignment="Left" VerticalAlignment="Top" Width="230" Margin="0,461,0,0" Height="71" Background="#FF020101" IsCancel="True" FontFamily="{DynamicResource MainFont}" FontSize="16" Click="Button_Click" FontWeight="Bold"/>
+        <Image Source="E:\!Курсовой проект\Pictures\about.png" Margin="10,461,890,10"></Image>
+        <Image Source="E:\!Курсовой проект\Pictures\burg.png" Margin="248,-11,591,453" OpacityMask="#FF290606"></Image>
+        <Button Content="" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="873,10,0,0" BorderBrush="#FF595151" Foreground="#FFDADADE" Height="59" RenderTransformOrigin="2.094,0.568" Click="Exit_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="E:\!Курсовой проект\Pictures\off.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Content=" История" Foreground="AliceBlue" HorizontalAlignment="Left" VerticalAlignment="Top" Width="230" Margin="0,295,0,0" Height="71" Background="#FF020101" IsCancel="True" FontFamily="Segoe Print" FontSize="18" FontWeight="Bold" Click="Story_Click"/>
+        <Button Content="       Сделать заказ" Foreground="AliceBlue" HorizontalAlignment="Left" VerticalAlignment="Top" Width="230" Margin="0,219,0,0" Height="71" Background="#FF020101" IsCancel="True" FontFamily="Segoe Print" FontSize="18" FontWeight="Bold" Click="ToOrder_Click"/>
+        <Button Content="Склад" Foreground="AliceBlue" HorizontalAlignment="Left" VerticalAlignment="Top" Width="230" Margin="0,143,0,0" Height="71" Background="#FF020101" IsCancel="True" FontFamily="Segoe Print" FontSize="18" FontWeight="Bold" Click="Stock_Click"/>
+        <Button Content="       На главную" Foreground="AliceBlue" HorizontalAlignment="Left" VerticalAlignment="Top" Width="230" Height="71" Background="#FF020101" IsCancel="True" FontFamily="Segoe Print" FontSize="18" FontWeight="Bold" Click="OnMain_Click"/>
+        <Image Source="E:\!Курсовой проект\Pictures\home.png" Margin="0,10,890,483"></Image>
+        <Image Source="E:\!Курсовой проект\Pictures\story.png" Margin="0,305,890,188"></Image>
+        <Image Source="E:\!Курсовой проект\Pictures\add.png" Margin="0,228,890,265"></Image>
+        <Image Source="E:\!Курсовой проект\Pictures\stockkl.png" Margin="0,152,890,341"></Image>
+
+
+        <TextBox x:Name="PriceBox" HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" Margin="784,176,0,0" PreviewKeyDown="Box_PreviewKeyDown"/>
+        <Button x:Name="Button3" Content="Добавить" 
+                          HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="521,236,0,0"  Height="49" Background="Black" BorderBrush="#FF595151" Foreground="#FFDADADE" RenderTransformOrigin="1.024,0.473" Click="Add_Click" FontSize="16"/>
+        <Label Content="Название:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="453,145,0,0" FontSize="16" Width="123" FontFamily="{DynamicResource MainFont}" FontWeight="Bold"/>
+        <Label Content="Количество:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="624,145,0,0" RenderTransformOrigin="-0.003,0.564" FontSize="16" Width="103" FontFamily="{DynamicResource MainFont}" FontWeight="Bold"/>
+        <TextBox x:Name="NameBox" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Margin="453,174,0,0" RenderTransformOrigin="-0.083,0.765"/>
+        <DataGrid AutoGenerateColumns="True"  x:Name="stockGrid" HorizontalAlignment="Left" Height="161" Margin="280,348,0,0" VerticalAlignment="Top" Width="609" AlternatingRowBackground="LightSkyBlue"/>
+        <Button Content="Показать" Background="Black" BorderBrush="#FF595151" Foreground="#FFDADADE" HorizontalAlignment="Left" Margin="280,310,0,0" VerticalAlignment="Top" Width="117" Height="40" Click="Show_Click" FontSize="16"/>
+        <Label Content="Цена:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="784,143,0,0" RenderTransformOrigin="-0.003,0.564" FontSize="16" Width="51" FontFamily="{DynamicResource MainFont}" FontWeight="Bold"/>
+        <TextBox x:Name="CountBox" HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Margin="637,176,0,0" RenderTransformOrigin="-0.083,0.765" PreviewKeyDown="Box_PreviewKeyDown"/>
+        <ComboBox x:Name="Combo" HorizontalAlignment="Left" Margin="280,176,0,0" VerticalAlignment="Top" Width="141" RenderTransformOrigin="0.527,-1.136" Height="38" SelectionChanged="Combo_SelectionChanged" >
+            <TextBlock><Run Text="Первое"/></TextBlock>
+            <TextBlock><Run Text="Второе"/></TextBlock>
+            <TextBlock><Run Text="Фастфуд"/></TextBlock>
+            <TextBlock><Run Text="Напитки"/></TextBlock>
+        </ComboBox>
+        <Label Content="Тип блюда:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="280,145,0,0" FontSize="16" Width="123" FontFamily="{DynamicResource MainFont}" FontWeight="Bold"/>
+        <ComboBox x:Name="Combo2" HorizontalAlignment="Left" Margin="397,310,0,0" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.527,-1.136" Height="38" >
+            <TextBlock><Run Text="Все"/></TextBlock>
+            <TextBlock><Run Text="Первое"/></TextBlock>
+            <TextBlock><Run Text="Второе"/></TextBlock>
+            <TextBlock><Run Text="Фастфуд"/></TextBlock>
+            <TextBlock><Run Text="Напитки"/></TextBlock>
+        </ComboBox>
+        <Label Content="Склад" HorizontalAlignment="Left" Margin="504,-17,0,0" VerticalAlignment="Top" FontSize="72" FontWeight="Bold"/>
+    </Grid>
+</Window>
