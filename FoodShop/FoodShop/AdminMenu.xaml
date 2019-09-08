@@ -18,7 +18,7 @@
                 <ImageBrush ImageSource="E:\!Курсовой проект\Pictures\off.png"></ImageBrush>
             </Button.Background>
         </Button>
-        <Button Content=" История" Foreground="AliceBlue" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225" Margin="0,295,0,0" Height="71" Background="#FF020101" IsCancel="True" FontFamily="Segoe Print" FontSize="18" FontWeight="Bold" Click="Story_Click"/>
+        <Button Content=" История." Foreground="AliceBlue" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225" Margin="0,295,0,0" Height="71" Background="#FF020101" IsCancel="True" FontFamily="Segoe Print" FontSize="18" FontWeight="Bold" Click="Story_Click"/>
         <Button Content="       Сделать заказ" Foreground="AliceBlue" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225" Margin="0,219,0,0" Height="71" Background="#FF020101" IsCancel="True" FontFamily="Segoe Print" FontSize="18" FontWeight="Bold" Click="ToOrder_Click"/>
         <Button Content="Склад" Foreground="AliceBlue" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225" Margin="0,143,0,0" Height="71" Background="#FF020101" IsCancel="True" FontFamily="Segoe Print" FontSize="18" FontWeight="Bold" Click="Stock_Click"/>
         <Button Content="       На главную" Foreground="AliceBlue" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225" Height="71" Background="#FF020101" IsCancel="True" FontFamily="Segoe Print" FontSize="18" FontWeight="Bold" Click="OnMain_Click"/>
